@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floristería 19 Avenida - Arreglos Florales Hermosos</title>
+    <title>Floristería 19 Avenida</title>
     <style>
         * {
             margin: 0;
@@ -267,9 +267,8 @@
         }
 
         .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
 
@@ -291,55 +290,6 @@
             color: #ff6b6b;
         }
 
-        .contact-form {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #ff6b6b;
-        }
-
-        .submit-button {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-        }
 
         /* Footer */
         footer {
@@ -363,9 +313,6 @@
                 font-size: 1.1rem;
             }
 
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
 
             .products-grid {
                 grid-template-columns: 1fr;
@@ -418,17 +365,16 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content fade-in">
-            <h1>Arreglos Florales Hermosos</h1>
-            <p>Creando momentos especiales con la belleza natural de las flores</p>
-            <a href="#productos" class="cta-button">Ver Nuestros Productos</a>
-        </div>
-        <div class="floating">🌻</div>
-        <div class="floating">🌹</div>
-        <div class="floating">🌺</div>
-    </section>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content fade-in">
+                <h1>Floristería 19 Avenida</h1>
+                <p>Arreglos Florales Hermosos</p>
+            </div>
+            <div class="floating">🌻</div>
+            <div class="floating">🌹</div>
+            <div class="floating">🌺</div>
+        </section>
 
     <!-- Products Section -->
     <section id="productos" class="products">
@@ -441,9 +387,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Ramo de Girasoles y Rosas</h3>
-                        <p class="product-description">Hermoso ramo con girasoles amarillos y rosas rojas, perfecto para ocasiones especiales.</p>
-                        <div class="product-price">$45.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 350</div>
                     </div>
                 </div>
 
@@ -453,9 +397,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Arreglo en Cesta</h3>
-                        <p class="product-description">Elegante arreglo en cesta de mimbre con gerberas y crisantemos de colores vibrantes.</p>
-                        <div class="product-price">$65.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 500</div>
                     </div>
                 </div>
 
@@ -465,9 +407,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Bouquet de Rosas y Crisantemos</h3>
-                        <p class="product-description">Delicado bouquet con rosas rosadas y crisantemos blancos, ideal para regalar.</p>
-                        <div class="product-price">$55.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 425</div>
                     </div>
                 </div>
 
@@ -477,9 +417,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Arreglo Mixto Colorido</h3>
-                        <p class="product-description">Variedad de flores en colores vibrantes, perfecto para alegrar cualquier espacio.</p>
-                        <div class="product-price">$40.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 310</div>
                     </div>
                 </div>
 
@@ -489,9 +427,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Ramo de Gerberas</h3>
-                        <p class="product-description">Fresco ramo de gerberas en colores rojo y rosa, con follaje verde natural.</p>
-                        <div class="product-price">$35.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 270</div>
                     </div>
                 </div>
 
@@ -501,9 +437,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Arreglo Elegante</h3>
-                        <p class="product-description">Sofisticado arreglo con flores blancas y amarillas, envuelto en papel especial.</p>
-                        <div class="product-price">$50.000</div>
-                        <button class="product-button">Pedir Ahora</button>
+                        <div class="product-price">Q. 385</div>
                     </div>
                 </div>
             </div>
@@ -518,22 +452,18 @@
                 <div class="service-card fade-in">
                     <div class="service-icon">🚚</div>
                     <h3 class="service-title">Entrega a Domicilio</h3>
-                    <p>Entregamos tus arreglos florales directamente a la dirección que desees en toda la ciudad.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">🎨</div>
                     <h3 class="service-title">Diseño Personalizado</h3>
-                    <p>Creamos arreglos únicos según tus preferencias y la ocasión especial que estés celebrando.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">💐</div>
                     <h3 class="service-title">Eventos Especiales</h3>
-                    <p>Decoramos bodas, cumpleaños, aniversarios y cualquier evento importante en tu vida.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">🌱</div>
                     <h3 class="service-title">Plantas y Jardinería</h3>
-                    <p>También ofrecemos plantas de interior, macetas y servicios de jardinería para tu hogar.</p>
                 </div>
             </div>
         </div>
@@ -545,49 +475,19 @@
             <h2 class="section-title">Contáctanos</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Información de Contacto</h3>
+                    <h3>Contacto</h3>
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
-                        <span>Calle 19 Avenida, Centro de la Ciudad</span>
+                        <span>Calle 19 Avenida</span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📞</span>
-                        <span>+57 (1) 234-5678</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span>info@floristeria19av.com</span>
+                        <span>+502 1234-5678</span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">🕒</span>
                         <span>Lun - Sáb: 8:00 AM - 7:00 PM</span>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🌐</span>
-                        <span>Domingos: 9:00 AM - 5:00 PM</span>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Envíanos un Mensaje</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Enviar Mensaje</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -596,8 +496,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Floristería 19 Avenida. Todos los derechos reservados.</p>
-            <p>🌺 Creando belleza natural desde 2020 🌺</p>
+            <p>&copy; 2024 Floristería 19 Avenida</p>
         </div>
     </footer>
 
@@ -635,12 +534,6 @@
             observer.observe(card);
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-            this.reset();
-        });
 
         // Add floating animation to hero elements
         const floatingElements = document.querySelectorAll('.floating');
