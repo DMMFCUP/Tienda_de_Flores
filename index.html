@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floristería 19 Avenida</title>
+    <title>Floristería</title>
     <style>
         * {
             margin: 0;
@@ -160,24 +160,11 @@
         .product-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(45deg, #ff9a9e, #fecfef);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             overflow: hidden;
-        }
-
-        .product-image::before {
-            content: '🌸';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            opacity: 0.8;
         }
 
         .product-info {
@@ -355,7 +342,7 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">🌸 Floristería 19 Avenida</div>
+            <div class="logo">🌸 Floristería</div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
@@ -368,7 +355,7 @@
         <!-- Hero Section -->
         <section id="inicio" class="hero">
             <div class="hero-content fade-in">
-                <h1>Floristería 19 Avenida</h1>
+                <h1>Floristería</h1>
                 <p>Arreglos Florales Hermosos</p>
             </div>
             <div class="floating">🌻</div>
@@ -382,62 +369,44 @@
             <h2 class="section-title">Nuestros Arreglos Florales</h2>
             <div class="products-grid">
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #ff9a9e, #fecfef);">
-                        <div style="font-size: 3rem;">🌻</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/1.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Ramo de Girasoles y Rosas</h3>
-                        <div class="product-price">Q. 350</div>
+                        <h3 class="product-title">Producto 1</h3>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #a8edea, #fed6e3);">
-                        <div style="font-size: 3rem;">🌺</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/2.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Arreglo en Cesta</h3>
-                        <div class="product-price">Q. 500</div>
+                        <h3 class="product-title">Producto 2</h3>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #ffecd2, #fcb69f);">
-                        <div style="font-size: 3rem;">🌷</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/3.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Bouquet de Rosas y Crisantemos</h3>
-                        <div class="product-price">Q. 425</div>
+                        <h3 class="product-title">Producto 3</h3>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #d299c2, #fef9d7);">
-                        <div style="font-size: 3rem;">🌼</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/4.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Arreglo Mixto Colorido</h3>
-                        <div class="product-price">Q. 310</div>
+                        <h3 class="product-title">Producto 4</h3>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #89f7fe, #66a6ff);">
-                        <div style="font-size: 3rem;">🌹</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/5.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Ramo de Gerberas</h3>
-                        <div class="product-price">Q. 270</div>
+                        <h3 class="product-title">Producto 5</h3>
                     </div>
                 </div>
 
                 <div class="product-card fade-in">
-                    <div class="product-image" style="background: linear-gradient(45deg, #ff9a9e, #fad0c4);">
-                        <div style="font-size: 3rem;">🌸</div>
-                    </div>
+                    <div class="product-image" style="background-image: url('imagenes/6.jpg');"></div>
                     <div class="product-info">
-                        <h3 class="product-title">Arreglo Elegante</h3>
-                        <div class="product-price">Q. 385</div>
+                        <h3 class="product-title">Producto 6</h3>
                     </div>
                 </div>
             </div>
@@ -478,15 +447,15 @@
                     <h3>Contacto</h3>
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
-                        <span>Calle 19 Avenida</span>
+                        <span>****************</span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📞</span>
-                        <span>+502 1234-5678</span>
+                        <span>************</span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">🕒</span>
-                        <span>Lun - Sáb: 8:00 AM - 7:00 PM</span>
+                        <span>************************</span>
                     </div>
                 </div>
             </div>
@@ -496,7 +465,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Floristería 19 Avenida</p>
+            <p>&copy; 2024 Floristería</p>
         </div>
     </footer>
 
