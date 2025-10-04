@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo RGB Cambiante</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.5s ease;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-info {
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .color-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fondo RGB Cambiante</h1>
+        <div class="color-preview" id="colorPreview"></div>
+        <div class="color-info" id="colorInfo">RGB(255, 0, 0)</div>
+        <div class="controls">
+            <button onclick="startAnimation()">Iniciar Animación</button>
+            <button onclick="stopAnimation()">Detener Animación</button>
+            <button onclick="randomColor()">Color Aleatorio</button>
+            <button onclick="cycleMode()">Cambiar Modo</button>
+        </div>
+    </div>
+
+    <script>
+        let animationId;
+        let isAnimating = false;
+        let mode = 0; // 0: gradiente suave, 1: colores vibrantes, 2: tonos pastel
+        let hue = 0;
+
+        const modes = [
+            { name: "Gradiente Suave", speed: 0.5 },
+            { name: "Colores Vibrantes", speed: 2 },
+            { name: "Tonos Pastel", speed: 1 }
+        ];
+
+        function updateBackground(r, g, b) {
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            document.getElementById('colorInfo').textContent = `RGB(${r}, ${g}, ${b})`;
+            document.getElementById('colorPreview').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function startAnimation() {
+            if (isAnimating) return;
+            isAnimating = true;
+            animate();
+        }
+
+        function stopAnimation() {
+            isAnimating = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        }
+
+        function randomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            updateBackground(r, g, b);
+        }
+
+        function cycleMode() {
+            mode = (mode + 1) % modes.length;
+            alert(`Modo cambiado a: ${modes[mode].name}`);
+        }
+
+        function animate() {
+            if (!isAnimating) return;
+
+            let r, g, b;
+
+            switch (mode) {
+                case 0: // Gradiente suave
+                    r = Math.floor(128 + 127 * Math.sin(hue * 0.01));
+                    g = Math.floor(128 + 127 * Math.sin(hue * 0.01 + 2));
+                    b = Math.floor(128 + 127 * Math.sin(hue * 0.01 + 4));
+                    break;
+                case 1: // Colores vibrantes
+                    r = Math.floor(255 * (Math.sin(hue * 0.02) + 1) / 2);
+                    g = Math.floor(255 * (Math.sin(hue * 0.02 + 2.094) + 1) / 2);
+                    b = Math.floor(255 * (Math.sin(hue * 0.02 + 4.188) + 1) / 2);
+                    break;
+                case 2: // Tonos pastel
+                    r = Math.floor(200 + 55 * Math.sin(hue * 0.015));
+                    g = Math.floor(200 + 55 * Math.sin(hue * 0.015 + 2.1));
+                    b = Math.floor(200 + 55 * Math.sin(hue * 0.015 + 4.2));
+                    break;
+            }
+
+            updateBackground(r, g, b);
+            hue += modes[mode].speed;
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // Inicializar con un color aleatorio
+        randomColor();
+    </script>
+</body>
+</html>
